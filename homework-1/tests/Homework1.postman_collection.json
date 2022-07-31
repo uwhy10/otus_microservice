@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "ed1083f8-a121-45db-a205-bcbaf04e61d1",
+		"name": "Homework1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check status and body\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.expect(pm.response.text()).to.include('{\"status\":\"OK\"}');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/health",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Rewrite Path",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check status and body\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.expect(pm.response.text()).to.include('{\"status\":\"OK\"}');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/otusapp/yulia/test",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otusapp",
+						"yulia",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
